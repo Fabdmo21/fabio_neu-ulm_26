@@ -1,1 +1,572 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>Fabio De Marzo – Kommunalwahl Neu-Ulm 2026</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Fabio De Marzo – Kandidat für den Stadtrat Neu-Ulm (Platz 4, Junge Union) und den Kreistag Neu-Ulm (Platz 46). Informationen zu Person, Themen und Kommunalwahl 2026." />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      background: #e9edf4; /* leichtes Grau-Blau statt knallweiß */
+      color: #222;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #0f3558; /* dunkles Blau */
+      border-bottom: 1px solid #0a243a;
+    }
+
+    .nav-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0.75rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #fff;
+    }
+
+    nav a {
+      margin-left: 1rem;
+      text-decoration: none;
+      font-size: 0.95rem;
+      color: #f4f7fb;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 1.5rem 1rem 3rem;
+    }
+
+    section {
+      padding: 3rem 0 2rem;
+      border-bottom: 1px solid #ccd3e0;
+    }
+
+    section:last-of-type {
+      border-bottom: none;
+    }
+
+    h1, h2, h3 {
+      margin-bottom: 1rem;
+      font-weight: 700;
+      color: #0f1a2a;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+    }
+
+    p {
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-wrapper {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.2fr);
+      gap: 1.5rem;
+      align-items: stretch;
+    }
+
+    .hero-text {
+      background: #ffffff;
+      border-radius: 0.8rem;
+      padding: 1.5rem;
+      border: 1px solid #d3d8e3;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.04);
+    }
+
+    .hero-photo {
+      background: linear-gradient(135deg, #0f3558, #2f6fb4);
+      border-radius: 0.8rem;
+      border: 1px solid #0a243a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #f4f7fb;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .hero-sub {
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+
+    .hero-meta {
+      font-size: 0.95rem;
+      color: #444;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn-row {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .btn {
+      padding: 0.6rem 1.2rem;
+      border-radius: 999px;
+      border: 1px solid #0f3558;
+      background: #0f3558;
+      color: #fff;
+      font-size: 0.95rem;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn.secondary {
+      background: #ffffff;
+      color: #0f3558;
+    }
+
+    .grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 0.6rem;
+      padding: 1rem;
+      border: 1px solid #d3d8e3;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.03);
+    }
+
+    ul {
+      margin-left: 1.1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    li {
+      margin-bottom: 0.3rem;
+    }
+
+    .small {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .muted {
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    .image-placeholder {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 0.6rem;
+      border: 1px dashed #9aa7c2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      color: #5c6b88;
+      background: #f4f6fb;
+      margin-bottom: 0.75rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem 1rem 2rem;
+      font-size: 0.85rem;
+      color: #666;
+    }
+
+    @media (max-width: 800px) {
+      .hero-wrapper {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.4rem;
+      }
+
+      nav a {
+        margin-left: 0;
+        margin-right: 0.75rem;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <div class="logo">Fabio De&nbsp;Marzo</div>
+      <nav>
+        <a href="#start">Start</a>
+        <a href="#ueber-mich">Über mich</a>
+        <a href="#themen">Meine Themen</a>
+        <a href="#wahl2026">Kommunalwahl 2026</a>
+        <a href="#beitraege">Beiträge</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- START -->
+    <section id="start">
+      <div class="hero-wrapper">
+        <div class="hero-text">
+          <h1>Kommunalwahl Neu-Ulm 2026</h1>
+          <p class="hero-sub">
+            Kandidat für den Stadtrat Neu-Ulm (Platz&nbsp;4, Junge Union)  
+            und den Kreistag Neu-Ulm (Platz&nbsp;46, Junge Union)
+          </p>
+          <p class="hero-meta">
+            Ich bin 26 Jahre alt und lebe in Neu-Ulm. 2026 kandidiere ich zum ersten Mal
+            für den Stadtrat und den Kreistag – mit einem klaren Ziel: Politik vor Ort
+            wieder näher an das echte Leben der Menschen zu bringen.
+          </p>
+          <p>
+            Viele sind mit der aktuellen Politik unzufrieden – nicht nur auf Bundesebene,
+            sondern auch, weil vor Ort oft an den Menschen vorbeigeredet wird. Ich möchte,
+            dass Neu-Ulm eine Stadt bleibt, in der man sich sicher fühlt, in der Leistung
+            anerkannt wird und Entscheidungen fair und nachvollziehbar getroffen werden.
+          </p>
+
+          <div class="btn-row">
+            <a href="#ueber-mich" class="btn">Mehr über mich</a>
+            <a href="#themen" class="btn secondary">Meine Themen</a>
+            <a href="#wahl2026" class="btn secondary">So kannst du mich wählen</a>
+          </div>
+        </div>
+
+        <div class="hero-photo">
+          <!-- Hier später ein Foto von dir einfügen -->
+          <div>
+            <strong>Bildplatzhalter</strong><br />
+            Hier könnte ein Portraitfoto von dir stehen.<br />
+            Später einfach dieses Feld durch ein &lt;img&gt; ersetzen.
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-2" style="margin-top: 2rem;">
+        <div class="card">
+          <h3>Innere Sicherheit</h3>
+          <p>
+            Neu-Ulm soll eine Stadt sein, in der man sich am Bahnhof, in der Innenstadt
+            und in den Wohngebieten sicher fühlt – tagsüber und am Abend. Probleme müssen
+            klar benannt werden, statt aus Angst vor „falschen Bildern“ unter den Teppich
+            gekehrt zu werden.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Bildung &amp; Chancen</h3>
+          <p>
+            Starke Schulen, gute Rahmenbedingungen für Vereine und faire Chancen für
+            Schüler, Azubis und Studierende – nicht nur in Sonntagsreden, sondern spürbar
+            im Alltag.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Solide Finanzen</h3>
+          <p>
+            Eine Stadt kann auf Dauer nicht mehr ausgeben, als sie sich leisten kann.
+            Ich stehe für transparente Prioritäten und einen verantwortungsvollen Umgang
+            mit Steuergeld.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Gerechtigkeit &amp; freie Debatte</h3>
+          <p>
+            Entscheidungen müssen erklärbar und fair sein. Dazu gehört, dass man
+            Probleme offen ansprechen darf – ohne Denkverbote und ohne moralische Keulen,
+            aber mit Respekt im Umgang.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ÜBER MICH -->
+    <section id="ueber-mich">
+      <h2>Über mich</h2>
+      <p>
+        Ich bin Fabio De&nbsp;Marzo, 26 Jahre alt, lebe in Neu-Ulm und bin in
+        Thalfingen aufgewachsen. Schule, Fußball, Familie und Freunde haben meinen
+        Alltag geprägt – und mir früh gezeigt, wie unterschiedlich Lebensrealitäten
+        selbst in einer Region sein können.
+      </p>
+      <p>
+        Bevor ich studiert habe, war ich im sozialen Bereich und auf dem Bau tätig.
+        Heute studiere ich Wirtschaftsrecht und arbeite als Werkstudent im Bereich
+        Recht und Compliance. Diese Mischung aus Praxis, Studium und politischem
+        Interesse prägt meinen Blick auf die Dinge.
+      </p>
+
+      <div class="grid grid-2" style="margin-top: 1.5rem;">
+        <div>
+          <h3>Lebensstationen</h3>
+          <ul>
+            <li>1999 geboren</li>
+            <li>Aufgewachsen in Thalfingen (Elchingen)</li>
+            <li>Schulabschluss an der Falkenburgschule Ulm (Realschule)</li>
+            <li>Freiwilliges Soziales Jahr (FSJ) in einer psychiatrischen Einrichtung</li>
+            <li>Rund eineinhalb Jahre Arbeit auf dem Bau bei der Kolb&nbsp;GmbH</li>
+            <li>Fachhochschulreife (Schwerpunkt Wirtschaft/BWL) an der ProGenius Schule Ulm</li>
+            <li>Studium Wirtschaftsrecht (HfWU Nürtingen-Geislingen)</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Beruf &amp; politisches Engagement</h3>
+          <ul>
+            <li>Werkstudent im Bereich Recht/Compliance, u.&nbsp;a. bei Gleiss&nbsp;Lutz (Stuttgart), DMP&nbsp;Solutions (Ulm) und aktuell in der Vivecti&nbsp;Group am Standort Ulm</li>
+            <li>Mitglied der CSU</li>
+            <li>Mitglied der Jungen Union Neu-Ulm</li>
+            <li>Kandidat für den Stadtrat Neu-Ulm (Platz&nbsp;4, Liste „Junge Union“)</li>
+            <li>Kandidat für den Kreistag Neu-Ulm (Platz&nbsp;46, Liste „Junge Union“)</li>
+          </ul>
+        </div>
+      </div>
+
+      <p style="margin-top: 1rem;">
+        Ich bringe Erfahrungen aus sozialer Arbeit, körperlich harter Arbeit, Studium und Büroalltag mit.
+        Dieser Mix ist mir wichtig: Kommunalpolitik sollte die Realität der Menschen kennen, über die entschieden wird.
+      </p>
+    </section>
+
+    <!-- THEMEN -->
+    <section id="themen">
+      <h2>Meine Themen</h2>
+      <p class="muted">
+        Kommunalpolitik ist nicht Berlin. Hier entscheidet sich, wie sich unsere Stadt anfühlt –
+        ob sie sicher, fair und lebenswert ist. Das sind die Themen, für die ich mich einsetzen möchte:
+      </p>
+
+      <div class="grid grid-2" style="margin-top: 1.5rem;">
+        <div class="card">
+          <h3>Sicherheit im Alltag</h3>
+          <p>
+            Neu-Ulm soll eine Stadt sein, in der man sich am Bahnhof, in der Innenstadt
+            und in den Wohngebieten sicher fühlt – nicht nur tagsüber, sondern auch am Abend.
+          </p>
+          <ul>
+            <li>Problemzonen ehrlich benennen, statt sie zu beschönigen</li>
+            <li>Zusammenarbeit von Polizei, Ordnungsamt und Stadt gezielt stärken</li>
+            <li>Beleuchtung, Sauberkeit und Aufenthaltsqualität dort verbessern, wo es kippt</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Bildung, Jugend &amp; Chancen</h3>
+          <p>
+            Schulen, Vereine und Jugendarbeit sind die Grundlage dafür, dass junge Menschen
+            Perspektiven haben – und nicht nur beschäftigt werden.
+          </p>
+          <ul>
+            <li>Schulen und Infrastruktur so stärken, dass Unterricht und Angebote nicht am Limit laufen</li>
+            <li>Vereine unterstützen, die echte Jugendarbeit leisten</li>
+            <li>Junge Menschen anhören, bevor über sie entschieden wird</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Finanzen &amp; Verantwortung</h3>
+          <p>
+            Auch eine Stadt kann nicht dauerhaft mehr ausgeben, als langfristig tragbar ist.
+            Solide Finanzen sind Voraussetzung für Handlungsspielräume.
+          </p>
+          <ul>
+            <li>Klare Prioritäten statt Symbolpolitik</li>
+            <li>Transparente Begründung von Projekten – mit Kosten, Nutzen und Risiken</li>
+            <li>Keine Verschiebung von Problemen auf kommende Generationen</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Vereine, Ehrenamt &amp; Zusammenhalt</h3>
+          <p>
+            Ein großer Teil des echten Lebens spielt sich in Vereinen, Feuerwehren, Kirchengemeinden,
+            Initiativen und Nachbarschaften ab.
+          </p>
+          <ul>
+            <li>Ehrenamt und Vereine gezielt unterstützen statt mit Bürokratie zu überfordern</li>
+            <li>Klare Ansprechbarkeit der Stadt für Ehrenamtliche</li>
+            <li>Kommunale Entscheidungen so treffen, dass sie Vereinsarbeit erleichtern</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Meinungsfreiheit &amp; ehrliche Debatten</h3>
+          <p>
+            Viele haben das Gefühl, bestimmte Themen könne man kaum noch offen ansprechen,
+            ohne sofort in eine Schublade gesteckt zu werden. Das schadet der Demokratie.
+          </p>
+          <ul>
+            <li>Probleme klar, aber respektvoll benennen</li>
+            <li>Widerspruch als demokratischen Normalfall akzeptieren</li>
+            <li>Entscheidungen nach Argumenten treffen – nicht nach Lautstärke oder Trends</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Gerechtigkeit &amp; Respekt vor Leistung</h3>
+          <p>
+            Viele Menschen haben den Eindruck, dass sich Einsatz und Verantwortung immer
+            weniger lohnen. Das darf sich eine Gesellschaft auf Dauer nicht leisten.
+          </p>
+          <ul>
+            <li>Fleiß, Verantwortung und Engagement sichtbar wertschätzen</li>
+            <li>Gebühren, Förderungen und Belastungen nachvollziehbar und fair gestalten</li>
+            <li>Aufstiegsmöglichkeiten unabhängig von Herkunft und politischer Blase stärken</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- KOMMUNALWAHL 2026 -->
+    <section id="wahl2026">
+      <h2>Kommunalwahl 2026 – so kannst du mich unterstützen</h2>
+      <p>
+        Am <strong>8. März 2026</strong> finden in Neu-Ulm die Kommunalwahlen statt.
+        Ich kandidiere auf zwei Listen der Jungen Union:
+      </p>
+
+      <ul>
+        <li><strong>Stadtrat Neu-Ulm</strong> – Liste „Junge Union Bayern“, <strong>Platz 4</strong></li>
+        <li><strong>Kreistag Neu-Ulm</strong> – Liste „Junge Union“, <strong>Platz 46</strong></li>
+      </ul>
+
+      <h3 style="margin-top: 1.5rem;">Wie funktioniert das mit den Stimmen?</h3>
+      <p>
+        Bei der Kommunalwahl kannst du:
+      </p>
+      <ul>
+        <li>für den <strong>Stadtrat</strong> mehreren Personen Stimmen geben – bis zu <strong>3 Stimmen pro Person</strong>,</li>
+        <li>für den <strong>Kreistag</strong> ebenfalls mehreren Personen Stimmen geben – ebenfalls bis zu <strong>3 Stimmen pro Person</strong>.</li>
+      </ul>
+      <p>
+        Du findest meinen Namen auf den Stimmzetteln unter der Liste der Jungen Union:
+      </p>
+      <ul>
+        <li><strong>„Fabio De&nbsp;Marzo“</strong> – Stadtrat Neu-Ulm, Liste „Junge Union Bayern“</li>
+        <li><strong>„Fabio De&nbsp;Marzo“</strong> – Kreistag Neu-Ulm, Liste „Junge Union“</li>
+      </ul>
+
+      <h3 style="margin-top: 1.5rem;">Was hilft mir am meisten?</h3>
+      <p>
+        Am stärksten unterstützt du mich, wenn du:
+      </p>
+      <ul>
+        <li>mir auf dem <strong>Stadtrats-Stimmzettel 3 Stimmen</strong> gibst und</li>
+        <li>mir auf dem <strong>Kreistags-Stimmzettel ebenfalls 3 Stimmen</strong> gibst.</li>
+      </ul>
+
+      <p>
+        Kurz gesagt:
+        <strong>3 Stimmen Fabio im Stadtrat – 3 Stimmen Fabio im Kreistag.</strong>
+      </p>
+
+      <div class="btn-row">
+        <a href="https://instagram.com/" class="btn secondary">Zu meinem Instagram-Profil</a>
+        <a href="https://x.com/" class="btn secondary">Zu meinem X-Profil</a>
+      </div>
+      <p class="small" style="margin-top: 0.75rem;">
+        (Links bitte mit deinen echten Profil-URLs ersetzen oder über einen Linktree bündeln.)
+      </p>
+    </section>
+
+    <!-- BEITRÄGE -->
+    <section id="beitraege">
+      <h2>Beiträge &amp; Stellungnahmen</h2>
+      <p>
+        Hier werde ich in unregelmäßigen Abständen Texte zu politischen Themen veröffentlichen,
+        die mich beschäftigen – lokal, in Bayern und bundesweit.
+      </p>
+      <p>
+        Mir geht es dabei nicht um die nächste Schlagzeile, sondern um nachvollziehbare Argumente
+        und eine klare Einordnung. Wer sich ein genaueres Bild von meiner politischen Haltung machen
+        möchte, findet hier mehr als nur kurze Social-Media-Statements.
+      </p>
+
+      <div class="card" style="margin-top: 1.5rem;">
+        <div class="image-placeholder">
+          Hier kannst du später z.&nbsp;B. einen Screenshot des Zeitungsartikels oder eines JU-Posts einfügen.
+        </div>
+        <h3>Beispiele für kommende Beiträge</h3>
+        <ul>
+          <li>„Warum ich für den Stadtrat kandidiere“</li>
+          <li>„Innere Sicherheit in Neu-Ulm: Erfahrungen und Schwerpunkte“</li>
+          <li>„Gerechtigkeit heißt auch Ehrlichkeit – über Belastungen und soziale Fragen“</li>
+          <li>„Meinungsfreiheit in Zeiten von Shitstorms – warum wir wieder streiten lernen müssen“</li>
+        </ul>
+        <p class="small">
+          Diese Seite kannst du nach und nach mit konkreten Artikeln füllen.
+        </p>
+      </div>
+    </section>
+
+    <!-- KONTAKT -->
+    <section id="kontakt">
+      <h2>Kontakt</h2>
+      <p>
+        Politik lebt vom Austausch – nicht nur im Wahlkampf. Wenn du Fragen, Anregungen,
+        Kritik oder konkrete Anliegen aus Neu-Ulm und Umgebung hast, kannst du dich gerne melden.
+      </p>
+
+      <p>
+        <strong>E-Mail:</strong> <span class="small">[deine E-Mail-Adresse eintragen]</span><br/>
+        <strong>Instagram:</strong> <span class="small">[dein @Handle oder Link]</span><br/>
+        <strong>X (Twitter):</strong> <span class="small">[dein @Handle oder Link]</span>
+      </p>
+
+      <p class="small" style="margin-top: 0.75rem;">
+        Ich kann nicht jede Nachricht sofort beantworten, aber ich lese alles – besonders Rückmeldungen
+        aus Neu-Ulm sind mir wichtig.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2026 Fabio De&nbsp;Marzo – Kommunalwahl Neu-Ulm 2026
+  </footer>
+</body>
+</html>
 
