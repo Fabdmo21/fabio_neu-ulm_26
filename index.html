@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <title>Fabio De Marzo – Kommunalwahl Neu-Ulm 2026</title>
+  <title>Fabio De Marzo – Kommunalwahl 2026</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Fabio De Marzo – Kandidat für den Stadtrat Neu-Ulm (Platz 4, Junge Union) und den Kreistag Neu-Ulm (Platz 46). Informationen zu Person, Themen und Kommunalwahl 2026." />
   <style>
@@ -15,7 +15,7 @@
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       line-height: 1.6;
-      background: #e9edf4; /* leichtes Grau-Blau statt knallweiß */
+      background: #e9edf4;
       color: #222;
     }
 
@@ -23,7 +23,9 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: #0f3558; /* dunkles Blau */
+      background:
+        repeating-linear-gradient(135deg, rgba(255,255,255,0.15) 0 10px, rgba(255,255,255,0) 10px 20px),
+        #0f3558;
       border-bottom: 1px solid #0a243a;
     }
 
@@ -34,6 +36,8 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 0.75rem;
+      flex-wrap: nowrap;
     }
 
     .logo {
@@ -42,14 +46,29 @@
       color: #fff;
     }
 
-    nav a {
+    .menu-toggle {
+      background: none;
+      border: none;
+      color: #f4f7fb;
+      font-size: 1.6rem;
+      cursor: pointer;
+      display: none;
+    }
+
+    nav.nav-links {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    nav.nav-links a {
       margin-left: 1rem;
       text-decoration: none;
       font-size: 0.95rem;
       color: #f4f7fb;
     }
 
-    nav a:hover {
+    nav.nav-links a:hover {
       text-decoration: underline;
     }
 
@@ -106,16 +125,12 @@
     }
 
     .hero-photo {
-      background: linear-gradient(135deg, #0f3558, #2f6fb4);
+      background:
+        repeating-linear-gradient(135deg, rgba(255,255,255,0.3) 0 12px, rgba(255,255,255,0) 12px 24px),
+        linear-gradient(135deg, #0f3558, #2f6fb4);
       border-radius: 0.8rem;
       border: 1px solid #0a243a;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #f4f7fb;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.95rem;
+      min-height: 220px;
     }
 
     .hero-sub {
@@ -189,20 +204,6 @@
       font-size: 0.95rem;
     }
 
-    .image-placeholder {
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      border-radius: 0.6rem;
-      border: 1px dashed #9aa7c2;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.9rem;
-      color: #5c6b88;
-      background: #f4f6fb;
-      margin-bottom: 0.75rem;
-    }
-
     footer {
       text-align: center;
       padding: 1.5rem 1rem 2rem;
@@ -214,20 +215,33 @@
       .hero-wrapper {
         grid-template-columns: minmax(0, 1fr);
       }
+
+      .menu-toggle {
+        display: block;
+        margin-left: auto;
+      }
+
+      nav.nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 0.5rem;
+      }
+
+      header.nav-open nav.nav-links {
+        display: flex;
+      }
+
+      nav.nav-links a {
+        margin: 0.25rem 0;
+      }
+
+      .nav-container {
+        flex-wrap: wrap;
+      }
     }
 
     @media (max-width: 640px) {
-      .nav-container {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.4rem;
-      }
-
-      nav a {
-        margin-left: 0;
-        margin-right: 0.75rem;
-      }
-
       h1 {
         font-size: 1.6rem;
       }
@@ -235,10 +249,11 @@
   </style>
 </head>
 <body>
-  <header>
+  <header id="main-header">
     <div class="nav-container">
       <div class="logo">Fabio De&nbsp;Marzo</div>
-      <nav>
+      <button class="menu-toggle" aria-label="Menü öffnen oder schließen">☰</button>
+      <nav class="nav-links">
         <a href="#start">Start</a>
         <a href="#ueber-mich">Über mich</a>
         <a href="#themen">Meine Themen</a>
@@ -261,14 +276,13 @@
           </p>
           <p class="hero-meta">
             Ich bin 26 Jahre alt und lebe in Neu-Ulm. 2026 kandidiere ich zum ersten Mal
-            für den Stadtrat und den Kreistag – mit einem klaren Ziel: Politik vor Ort
-            wieder näher an das echte Leben der Menschen zu bringen.
+            für den Stadtrat und den Kreistag – in Bayern, für Neu-Ulm und den Landkreis.
           </p>
           <p>
-            Viele sind mit der aktuellen Politik unzufrieden – nicht nur auf Bundesebene,
-            sondern auch, weil vor Ort oft an den Menschen vorbeigeredet wird. Ich möchte,
-            dass Neu-Ulm eine Stadt bleibt, in der man sich sicher fühlt, in der Leistung
-            anerkannt wird und Entscheidungen fair und nachvollziehbar getroffen werden.
+            Viele Menschen in Deutschland sind mit der aktuellen Politik unzufrieden –
+            nicht nur auf Bundesebene. Oft wird über Probleme gesprochen, ohne dass sich
+            im Alltag spürbar etwas verändert. Ich möchte, dass Entscheidungen nachvollziehbar
+            begründet werden und die Lebenswirklichkeit der Menschen im Mittelpunkt steht.
           </p>
 
           <div class="btn-row">
@@ -278,24 +292,16 @@
           </div>
         </div>
 
-        <div class="hero-photo">
-          <!-- Hier später ein Foto von dir einfügen -->
-          <div>
-            <strong>Bildplatzhalter</strong><br />
-            Hier könnte ein Portraitfoto von dir stehen.<br />
-            Später einfach dieses Feld durch ein &lt;img&gt; ersetzen.
-          </div>
-        </div>
+        <div class="hero-photo" aria-hidden="true"></div>
       </div>
 
       <div class="grid grid-2" style="margin-top: 2rem;">
         <div class="card">
           <h3>Innere Sicherheit</h3>
           <p>
-            Neu-Ulm soll eine Stadt sein, in der man sich am Bahnhof, in der Innenstadt
-            und in den Wohngebieten sicher fühlt – tagsüber und am Abend. Probleme müssen
-            klar benannt werden, statt aus Angst vor „falschen Bildern“ unter den Teppich
-            gekehrt zu werden.
+            Bahnhöfe, Innenstädte und Wohngebiete sollten Orte sein, an denen man sich
+            sicher fühlt – tagsüber und am Abend. Probleme müssen klar benannt werden,
+            statt aus Angst vor „falschen Bildern“ unter den Teppich gekehrt zu werden.
           </p>
         </div>
         <div class="card">
@@ -309,7 +315,7 @@
         <div class="card">
           <h3>Solide Finanzen</h3>
           <p>
-            Eine Stadt kann auf Dauer nicht mehr ausgeben, als sie sich leisten kann.
+            Eine Kommune kann auf Dauer nicht mehr ausgeben, als sie sich leisten kann.
             Ich stehe für transparente Prioritäten und einen verantwortungsvollen Umgang
             mit Steuergeld.
           </p>
@@ -352,6 +358,7 @@
             <li>Rund eineinhalb Jahre Arbeit auf dem Bau bei der Kolb&nbsp;GmbH</li>
             <li>Fachhochschulreife (Schwerpunkt Wirtschaft/BWL) an der ProGenius Schule Ulm</li>
             <li>Studium Wirtschaftsrecht (HfWU Nürtingen-Geislingen)</li>
+            <li>Auslandssemester an der University of Economics in Bratislava</li>
           </ul>
         </div>
         <div>
@@ -360,15 +367,15 @@
             <li>Werkstudent im Bereich Recht/Compliance, u.&nbsp;a. bei Gleiss&nbsp;Lutz (Stuttgart), DMP&nbsp;Solutions (Ulm) und aktuell in der Vivecti&nbsp;Group am Standort Ulm</li>
             <li>Mitglied der CSU</li>
             <li>Mitglied der Jungen Union Neu-Ulm</li>
-            <li>Kandidat für den Stadtrat Neu-Ulm (Platz&nbsp;4, Liste „Junge Union“)</li>
-            <li>Kandidat für den Kreistag Neu-Ulm (Platz&nbsp;46, Liste „Junge Union“)</li>
+            <li>Kandidat für den Stadtrat Neu-Ulm (Platz&nbsp;4, Junge Union)</li>
+            <li>Kandidat für den Kreistag Neu-Ulm (Platz&nbsp;46, Junge Union)</li>
           </ul>
         </div>
       </div>
 
       <p style="margin-top: 1rem;">
-        Ich bringe Erfahrungen aus sozialer Arbeit, körperlich harter Arbeit, Studium und Büroalltag mit.
-        Dieser Mix ist mir wichtig: Kommunalpolitik sollte die Realität der Menschen kennen, über die entschieden wird.
+        Durch soziale Arbeit, körperlich harte Jobs, Studium und Büroalltag kenne ich sehr unterschiedliche
+        Perspektiven auf Politik und Verwaltung. Genau diesen Blick möchte ich in die Kommunalpolitik einbringen.
       </p>
     </section>
 
@@ -376,20 +383,22 @@
     <section id="themen">
       <h2>Meine Themen</h2>
       <p class="muted">
-        Kommunalpolitik ist nicht Berlin. Hier entscheidet sich, wie sich unsere Stadt anfühlt –
-        ob sie sicher, fair und lebenswert ist. Das sind die Themen, für die ich mich einsetzen möchte:
+        Kommunalpolitik ist nicht Berlin. Hier entscheidet sich, wie sich unser Alltag anfühlt –
+        ob eine Stadt oder Gemeinde sicher, fair und lebenswert ist. Das sind die Themen,
+        für die ich mich besonders einsetzen möchte:
       </p>
 
       <div class="grid grid-2" style="margin-top: 1.5rem;">
         <div class="card">
           <h3>Sicherheit im Alltag</h3>
           <p>
-            Neu-Ulm soll eine Stadt sein, in der man sich am Bahnhof, in der Innenstadt
-            und in den Wohngebieten sicher fühlt – nicht nur tagsüber, sondern auch am Abend.
+            Öffentliche Räume sollen nicht von einer kleinen Minderheit dominiert werden,
+            die Regeln ignoriert. Sicherheit ist Voraussetzung dafür, dass sich Menschen
+            gerne draußen aufhalten.
           </p>
           <ul>
             <li>Problemzonen ehrlich benennen, statt sie zu beschönigen</li>
-            <li>Zusammenarbeit von Polizei, Ordnungsamt und Stadt gezielt stärken</li>
+            <li>Zusammenarbeit von Polizei, Ordnungsamt und Kommune gezielt stärken</li>
             <li>Beleuchtung, Sauberkeit und Aufenthaltsqualität dort verbessern, wo es kippt</li>
           </ul>
         </div>
@@ -410,7 +419,7 @@
         <div class="card">
           <h3>Finanzen &amp; Verantwortung</h3>
           <p>
-            Auch eine Stadt kann nicht dauerhaft mehr ausgeben, als langfristig tragbar ist.
+            Auch eine Kommune kann nicht dauerhaft mehr ausgeben, als langfristig tragbar ist.
             Solide Finanzen sind Voraussetzung für Handlungsspielräume.
           </p>
           <ul>
@@ -428,8 +437,8 @@
           </p>
           <ul>
             <li>Ehrenamt und Vereine gezielt unterstützen statt mit Bürokratie zu überfordern</li>
-            <li>Klare Ansprechbarkeit der Stadt für Ehrenamtliche</li>
-            <li>Kommunale Entscheidungen so treffen, dass sie Vereinsarbeit erleichtern</li>
+            <li>Klare Ansprechbarkeit der Kommune für Ehrenamtliche</li>
+            <li>Entscheidungen so treffen, dass sie Vereinsarbeit erleichtern</li>
           </ul>
         </div>
 
@@ -470,75 +479,59 @@
       </p>
 
       <ul>
-        <li><strong>Stadtrat Neu-Ulm</strong> – Liste „Junge Union Bayern“, <strong>Platz 4</strong></li>
-        <li><strong>Kreistag Neu-Ulm</strong> – Liste „Junge Union“, <strong>Platz 46</strong></li>
+        <li><strong>Stadtrat Neu-Ulm</strong> – Junge Union, <strong>Listenplatz 4</strong></li>
+        <li><strong>Kreistag Neu-Ulm</strong> – Junge Union, <strong>Listenplatz 46</strong></li>
       </ul>
 
-      <h3 style="margin-top: 1.5rem;">Wie funktioniert das mit den Stimmen?</h3>
+      <h3 style="margin-top: 1.5rem;">Wie funktionieren die Stimmen?</h3>
       <p>
-        Bei der Kommunalwahl kannst du:
+        Bei der Kommunalwahl kannst du im Stadtrat und im Kreistag
+        jeweils mehreren Kandidaten Stimmen geben. Pro Person sind
+        bis zu <strong>drei Stimmen</strong> möglich.
+      </p>
+      <p>
+        Auf den Stimmzetteln findest du mich unter der Jungen Union.
+        Wenn du meine Kandidatur unterstützen möchtest, kannst du mir dort deine Stimmen geben.
       </p>
       <ul>
-        <li>für den <strong>Stadtrat</strong> mehreren Personen Stimmen geben – bis zu <strong>3 Stimmen pro Person</strong>,</li>
-        <li>für den <strong>Kreistag</strong> ebenfalls mehreren Personen Stimmen geben – ebenfalls bis zu <strong>3 Stimmen pro Person</strong>.</li>
-      </ul>
-      <p>
-        Du findest meinen Namen auf den Stimmzetteln unter der Liste der Jungen Union:
-      </p>
-      <ul>
-        <li><strong>„Fabio De&nbsp;Marzo“</strong> – Stadtrat Neu-Ulm, Liste „Junge Union Bayern“</li>
-        <li><strong>„Fabio De&nbsp;Marzo“</strong> – Kreistag Neu-Ulm, Liste „Junge Union“</li>
-      </ul>
-
-      <h3 style="margin-top: 1.5rem;">Was hilft mir am meisten?</h3>
-      <p>
-        Am stärksten unterstützt du mich, wenn du:
-      </p>
-      <ul>
-        <li>mir auf dem <strong>Stadtrats-Stimmzettel 3 Stimmen</strong> gibst und</li>
-        <li>mir auf dem <strong>Kreistags-Stimmzettel ebenfalls 3 Stimmen</strong> gibst.</li>
+        <li><strong>Stadtrat:</strong> bis zu 3 Stimmen für „Fabio De&nbsp;Marzo“</li>
+        <li><strong>Kreistag:</strong> bis zu 3 Stimmen für „Fabio De&nbsp;Marzo“</li>
       </ul>
 
       <p>
-        Kurz gesagt:
-        <strong>3 Stimmen Fabio im Stadtrat – 3 Stimmen Fabio im Kreistag.</strong>
+        Am meisten hilfst du mir, wenn du mir auf beiden Stimmzetteln jeweils
+        deine <strong>maximal möglichen drei Stimmen</strong> gibst.
       </p>
 
       <div class="btn-row">
-        <a href="https://instagram.com/" class="btn secondary">Zu meinem Instagram-Profil</a>
-        <a href="https://x.com/" class="btn secondary">Zu meinem X-Profil</a>
+        <a href="https://instagram.com/fab.dmo" class="btn secondary">Zu meinem Instagram-Profil (@fab.dmo)</a>
       </div>
-      <p class="small" style="margin-top: 0.75rem;">
-        (Links bitte mit deinen echten Profil-URLs ersetzen oder über einen Linktree bündeln.)
-      </p>
     </section>
 
     <!-- BEITRÄGE -->
     <section id="beitraege">
       <h2>Beiträge &amp; Stellungnahmen</h2>
       <p>
-        Hier werde ich in unregelmäßigen Abständen Texte zu politischen Themen veröffentlichen,
+        Hier werden in unregelmäßigen Abständen Papers zu politischen Themen veröffentlicht,
         die mich beschäftigen – lokal, in Bayern und bundesweit.
       </p>
       <p>
-        Mir geht es dabei nicht um die nächste Schlagzeile, sondern um nachvollziehbare Argumente
-        und eine klare Einordnung. Wer sich ein genaueres Bild von meiner politischen Haltung machen
-        möchte, findet hier mehr als nur kurze Social-Media-Statements.
+        Wer sich ein genaueres Bild von meiner politischen Haltung machen möchte, findet hier
+        mehr als nur kurze Social-Media-Statements.
       </p>
 
       <div class="card" style="margin-top: 1.5rem;">
-        <div class="image-placeholder">
-          Hier kannst du später z.&nbsp;B. einen Screenshot des Zeitungsartikels oder eines JU-Posts einfügen.
-        </div>
-        <h3>Beispiele für kommende Beiträge</h3>
-        <ul>
-          <li>„Warum ich für den Stadtrat kandidiere“</li>
-          <li>„Innere Sicherheit in Neu-Ulm: Erfahrungen und Schwerpunkte“</li>
-          <li>„Gerechtigkeit heißt auch Ehrlichkeit – über Belastungen und soziale Fragen“</li>
-          <li>„Meinungsfreiheit in Zeiten von Shitstorms – warum wir wieder streiten lernen müssen“</li>
-        </ul>
+        <h3>Beiträge in Vorbereitung</h3>
+        <p>
+          Der erste ausführliche Beitrag ist in Arbeit. Sobald ein Paper fertig ist,
+          wird es hier mit einer kurzen Einleitung und einem Link zum vollständigen PDF-Dokument
+          veröffentlicht.
+        </p>
         <p class="small">
-          Diese Seite kannst du nach und nach mit konkreten Artikeln füllen.
+          Bis dahin ein externer Bericht:
+          <a href="https://www.swp.de/lokales/neu-ulm/kommunalwahl-2026-junge-union-stellt-kreistagsliste-auf-78495895.html" target="_blank" rel="noopener noreferrer">
+            Artikel der SÜDWEST PRESSE zur Kreistagsliste der Jungen Union
+          </a>.
         </p>
       </div>
     </section>
@@ -547,19 +540,16 @@
     <section id="kontakt">
       <h2>Kontakt</h2>
       <p>
-        Politik lebt vom Austausch – nicht nur im Wahlkampf. Wenn du Fragen, Anregungen,
-        Kritik oder konkrete Anliegen aus Neu-Ulm und Umgebung hast, kannst du dich gerne melden.
+        Politik lebt vom Austausch. Wenn du Fragen, Anregungen, Kritik oder konkrete Anliegen
+        aus Neu-Ulm und Umgebung hast, kannst du dich gerne melden.
       </p>
 
       <p>
-        <strong>E-Mail:</strong> <span class="small">[deine E-Mail-Adresse eintragen]</span><br/>
-        <strong>Instagram:</strong> <span class="small">[dein @Handle oder Link]</span><br/>
-        <strong>X (Twitter):</strong> <span class="small">[dein @Handle oder Link]</span>
-      </p>
-
-      <p class="small" style="margin-top: 0.75rem;">
-        Ich kann nicht jede Nachricht sofort beantworten, aber ich lese alles – besonders Rückmeldungen
-        aus Neu-Ulm sind mir wichtig.
+        <strong>E-Mail:</strong> <span class="small">de.marzo@web.de</span><br/>
+        <strong>Instagram:</strong>
+        <span class="small">
+          <a href="https://instagram.com/fab.dmo" target="_blank" rel="noopener noreferrer">@fab.dmo</a>
+        </span>
       </p>
     </section>
   </main>
@@ -567,6 +557,16 @@
   <footer>
     &copy; 2026 Fabio De&nbsp;Marzo – Kommunalwahl Neu-Ulm 2026
   </footer>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const header = document.getElementById('main-header');
+
+    if (menuToggle && header) {
+      menuToggle.addEventListener('click', () => {
+        header.classList.toggle('nav-open');
+      });
+    }
+  </script>
 </body>
 </html>
-
