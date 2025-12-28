@@ -1,3 +1,4 @@
+// Hamburger-Menü
 const menuToggle = document.querySelector('.menu-toggle');
 const header = document.getElementById('main-header');
 
@@ -7,17 +8,10 @@ if (menuToggle && header) {
   });
 }
 
-// Menü nach Klick auf Link wieder schließen (mobil)
-const navLinks = document.querySelectorAll('.nav-links a');
-navLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    header.classList.remove('nav-open');
-  });
-});
-
-// Fade-In / Reveal
+// Fade-In / Reveal (nur, wenn IntersectionObserver verfügbar ist)
 const revealEls = document.querySelectorAll('.reveal');
-if (revealEls.length) {
+
+if ('IntersectionObserver' in window && revealEls.length) {
   const revealObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach(entry => {
@@ -30,9 +24,12 @@ if (revealEls.length) {
     { threshold: 0.2 }
   );
   revealEls.forEach(el => revealObserver.observe(el));
+} else {
+  // Fallback: einfach alle anzeigen
+  revealEls.forEach(el => el.classList.add('visible'));
 }
 
-// Filter für Beiträge (nur auf beitraege.html wirklich aktiv)
+// Filter für Beiträge (läuft nur auf der Beiträge-Seite)
 const filterButtons = document.querySelectorAll('.filter-button');
 const posts = document.querySelectorAll('.post-list .card[data-category]');
 
