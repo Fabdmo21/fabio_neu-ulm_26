@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>Beiträge &amp; Stellungnahmen – Fabio De Marzo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header id="main-header">
+    <div class="nav-container">
+      <div class="logo">Fabio De&nbsp;Marzo</div>
+      <button class="menu-toggle" aria-label="Menü öffnen oder schließen">☰</button>
+      <nav class="nav-links">
+        <a href="index.html">Start</a>
+        <a href="ueber-mich.html">Über mich</a>
+        <a href="themen.html">Meine Themen</a>
+        <a href="wahl2026.html">Kommunalwahl 2026</a>
+        <a href="beitraege.html" class="active">Beiträge</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="beitraege">
+      <h2 class="reveal">Beiträge &amp; Stellungnahmen</h2>
+      <p class="reveal">
+        Hier werden in unregelmäßigen Abständen Papers zu politischen Themen veröffentlicht,
+        die mich beschäftigen – lokal, in Bayern und bundesweit.
+      </p>
+      <p class="reveal">
+        Wer sich ein genaueres Bild von meiner politischen Haltung machen möchte, findet hier
+        mehr als nur kurze Social-Media-Statements.
+      </p>
+
+      <div class="filter-bar reveal">
+        <button class="filter-button active" data-category="all">Alle</button>
+        <button class="filter-button" data-category="sicherheit">Sicherheit</button>
+        <button class="filter-button" data-category="bildung">Bildung</button>
+        <button class="filter-button" data-category="finanzen">Finanzen</button>
+        <button class="filter-button" data-category="meinungsfreiheit">Meinungsfreiheit</button>
+      </div>
+
+      <div class="post-list">
+        <!-- Vorlage für zukünftige Papers:
+        <div class="card reveal" data-category="sicherheit">
+          <h3>Paper-Titel<span class="badge pdf">PDF</span></h3>
+          <p class="post-meta">Kategorie: Sicherheit · Lesedauer: 7 Minuten · Status: Veröffentlicht</p>
+          <p class="small">
+            Kurze Einleitung zum Thema. <a href="DEIN-LINK-ZUM-PDF" target="_blank" rel="noopener noreferrer">Paper herunterladen</a>
+          </p>
+        </div>
+        -->
+        <div class="card reveal" data-category="info">
+          <h3>Noch keine Beiträge veröffentlicht</h3>
+          <p class="post-meta">
+            Sobald der erste Beitrag fertig ist, erscheint er hier mit Kurzbeschreibung und Download-Link.
+          </p>
+        </div>
+      </div>
+
+      <h3 style="margin-top: 2rem;" class="reveal">Externe Berichte</h3>
+      <div class="card reveal">
+        <p class="small">
+          Artikel der SÜDWEST PRESSE zur Kreistagsliste der Jungen Union:
+          <a href="https://www.swp.de/lokales/neu-ulm/kommunalwahl-2026-junge-union-stellt-kreistagsliste-auf-78495895.html" target="_blank" rel="noopener noreferrer">
+            Zum Artikel
+          </a>.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <div class="mobile-bar">
+    <a href="wahl2026.html">So wählst du mich</a>
+    <a href="kontakt.html" class="secondary">Kontakt</a>
+  </div>
+
+  <footer>
+    &copy; 2026 Fabio De&nbsp;Marzo – Kommunalwahl Neu-Ulm 2026
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
