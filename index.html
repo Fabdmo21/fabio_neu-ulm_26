@@ -99,6 +99,44 @@
     &copy; 2026 Fabio De&nbsp;Marzo – Kommunalwahl Neu-Ulm 2026
   </footer>
 
-  <script src="script.js"></script>
+   <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Hamburger-Menü
+      const menuToggle = document.querySelector('.menu-toggle');
+      const header = document.getElementById('main-header');
+
+      if (menuToggle && header) {
+        menuToggle.addEventListener('click', () => {
+          header.classList.toggle('nav-open');
+        });
+      }
+
+      // Filter für Beiträge (läuft nur dort, wo es die Elemente gibt)
+      const filterButtons = document.querySelectorAll('.filter-button');
+      const posts = document.querySelectorAll('.post-list .card[data-category]');
+
+      if (filterButtons.length && posts.length) {
+        filterButtons.forEach(btn => {
+          btn.addEventListener('click', () => {
+            const cat = btn.dataset.category || 'all';
+            filterButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            posts.forEach(post => {
+              const pcat = post.dataset.category || 'info';
+              if (cat === 'all') {
+                post.style.display = '';
+              } else {
+                post.style.display = (pcat === cat) ? '' : 'none';
+              }
+            });
+          });
+        });
+      }
+    });
+  </script>
+</body>
+</html>
+
 </body>
 </html>
