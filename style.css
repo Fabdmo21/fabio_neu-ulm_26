@@ -324,14 +324,14 @@ li {
 /* Fade-In Animations */
 
 .reveal {
-  opacity: 0;
-  transform: translateY(10px);
+  opacity: 1;
+  transform: none;
   transition: opacity 0.4s ease-out, transform 0.4s ease-out;
 }
 
 .reveal.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
 }
 
 /* Mobile Komfort-Bar */
